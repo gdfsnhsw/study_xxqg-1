@@ -2,15 +2,16 @@ package lib
 
 const (
 	userInfoUrl            = "https://pc-api.xuexi.cn/open/api/user/info"
-	userTotalscoreUrl      = "https://pc-api.xuexi.cn/open/api/score/get"
-	userTodaytotalscoreUrl = "https://pc-api.xuexi.cn/open/api/score/today/query"
-	userRatescoreUrl       = "https://pc-proxy-api.xuexi.cn/api/score/days/listScoreProgress?sence=score&deviceType=2"
+	userTotalscoreUrl      = "https://pc-proxy-api.xuexi.cn/delegate/score/get"
+	userTodaytotalscoreUrl = "https://pc-proxy-api.xuexi.cn/delegate/score/today/query"
+	userRatescoreUrl       = "https://pc-proxy-api.xuexi.cn/delegate/score/days/listScoreProgress?sence=score&deviceType=2"
 
 	// pageSize=1000&pageNo=1
 	querySpecialList = "https://pc-proxy-api.xuexi.cn/api/exam/service/paper/pc/list"
 	queryWeekList    = "https://pc-proxy-api.xuexi.cn/api/exam/service/practice/pc/weekly/more"
 )
 
+// 专项答题JSON结构
 type SpecialList struct {
 	PageNo         int `json:"pageNo"`
 	PageSize       int `json:"pageSize"`

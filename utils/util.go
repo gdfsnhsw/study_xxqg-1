@@ -48,7 +48,7 @@ func GetAbout() string {
  */
 func CheckUserCookie(cookies []*http.Cookie) (bool, error) {
 	client := GetClient()
-	response, err := client.R().SetCookies(cookies...).Get("https://pc-api.xuexi.cn/open/api/score/get")
+	response, err := client.R().SetCookies(cookies...).Get("https://pc-proxy-api.xuexi.cn/delegate/score/get")
 	if err != nil {
 		log.Errorln("获取用户总分错误" + err.Error())
 		return true, err
@@ -151,7 +151,7 @@ func DownloadDbFile() {
 		}
 	}()
 	log.Infoln("正在从github下载题库文件！")
-	response, err := http.Get("https://github.com/sjkhsl/study_xxqg/releases/download/v1.0.37-beta3/QuestionBank.db")
+	response, err := http.Get("https://github.com/sjkhsl/study_xxqg/releases/download/v1.0.39/QuestionBank.db")
 	if err != nil {
 		log.Errorln("下载db文件错误" + err.Error())
 		return
